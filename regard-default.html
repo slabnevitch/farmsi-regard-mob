@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=3, viewport-fit=cover, user-scalable=yes">
+
+    <meta name="description" content="Описание страницы">
+    <meta name="format-detection" content="telephone=no">
+    <title>Продукты</title>
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" sizes="144x144">
+    <link rel="icon" href="favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" href="favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght,GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC@8..144,-10..0,25..151,100..1000,-200..150,27..175,323..603,25..135,649..854,-305..-98,560..788,416..570,528..760&display=swap"
+          rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+<script defer src="main.da414ee54ffcbd72bfab.js"></script></head>
+
+<body>
+<div class="site">
+    <!-- Header Start-->
+    <!-- Header Top-->
+    <div class="header__top">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-between">
+                <a class="header__logo logo" href="/">
+                    <img class="logo__image"
+                         src="images/icons/logo.svg"
+                         alt="logo" width="124" height="24">
+                </a>
+                <div class="header__location location">
+                    <a class="location__current" href="javascript:void(0)" data-bs-toggle="modal"
+                       data-bs-target="#citySuggestModal">
+                        <img src="images/icons/pin.svg" alt="" class="location__icon">
+                        <span class="js-city-choosen-city">Москва и МО</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="cityChangeModal" tabindex="-1"
+         aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen city-change-modal">
+            <div class="city-change modal-content">
+                <button type="button" class="city-change__close" data-bs-dismiss="modal"
+                        aria-label="Close">
+                    <svg aria-hidden="true" width="24" height="24" viewBox="0 0 20 20"
+                         fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC"
+                              stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <path d="M4.66797 4.66663L15.3346 15.3333" stroke="#ABB6CC"
+                              stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="modal__header city-change__header">
+                    <p class="city-change__title">Выберите город</p>
+                    <div class="city-change__define">
+                        <svg class="city-change__define-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.25 18.4993L15.8333 5.16602L2.5 9.74935L7.95416 11.931C8.46237 12.1343 8.86505 12.537 9.06833 13.0452L11.25 18.4993Z"
+                                  stroke="#00C293" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+
+                        <div class="city-change__loading city-change__define-loading">
+                            <div class=""></div>
+                        </div>
+
+                        Определить
+                    </div>
+                </div>
+                <div class="modal__body city-change__body">
+                    <div class="city-change__choosen">
+                        <div class="city-change__loading city-change__choosen-loading">
+                            <div class=""></div>
+                        </div>
+                        <div class="city-change__choosen-text">Выбран:</div>
+                        <svg class="city-change__choosen-icon" width="16" height="20" viewBox="0 0 20 20" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M8.71159 18.8511L10 19.9994L11.2884 18.8511C15.4026 15.1846 17.5 11.9276 17.5 8.87888C17.5 4.55054 14.1783 1.25 10 1.25C5.82171 1.25 2.5 4.55054 2.5 8.87888C2.5 11.9276 4.59737 15.1846 8.71159 18.8511ZM13.75 8.75C13.75 6.67893 12.0711 5 10 5C7.92893 5 6.25 6.67893 6.25 8.75C6.25 10.8211 7.92893 12.5 10 12.5C12.0711 12.5 13.75 10.8211 13.75 8.75Z"
+                                  fill="#ABB6CC"/>
+                        </svg>
+                        <div class="city-change__choosen-text city-change__choosen-text--city js-city-choosen-city">
+                            Ростов-на-Дону
+                        </div>
+                        <div class="city-change__choosen-text city-change__choosen-text--region js-city-choosen-region">
+                            Ростовская область, очень длинный текст рег
+                        </div>
+                    </div>
+                    <div class="form-group w-100" style="position: relative; margin-bottom: 20px;">
+                        <input class="city-change__input js-city-search-input" type="text" name="city"
+                               placeholder="Город или регион">
+                        <svg class="city-change__input-icon" width="20" height="24" viewBox="0 0 20 20" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_2477_21238)">
+                                <circle cx="7.91667" cy="7.91667" r="7.91667"
+                                        transform="matrix(-1 0 0 1 18.3334 1.66602)"
+                                        stroke="#ABB6CC" stroke-width="2"/>
+                                <path d="M4.58337 15.416L1.66671 18.3327" stroke="#ABB6CC" stroke-width="2"
+                                      stroke-linecap="round"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_2477_21238">
+                                    <rect width="20" height="20" fill="white" transform="matrix(-1 0 0 1 20 0)"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <div class="city-change__loading city-change__input-loading">
+                            <div class=""></div>
+                        </div>
+                        <button class="city-change__input-clear" onclick="$('.js-city-search-input').val('')"
+                                type="button">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.66663 2.66797L13.3333 13.3346" stroke="#ABB6CC" stroke-width="2"
+                                      stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.3334 2.66797L2.66671 13.3346" stroke="#ABB6CC" stroke-width="2"
+                                      stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="city-change__cities">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="citySuggestModal" tabindex="-1"
+         aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="align-items: flex-end; margin: 0 16px; height: 100%;">
+            <div class="city-modal modal-content">
+                <button type="button" class="city-modal__close" data-bs-dismiss="modal"
+                        aria-label="Close">
+                    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 20 20"
+                         fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC"
+                              stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <path d="M4.66797 4.66663L15.3346 15.3333" stroke="#ABB6CC"
+                              stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="modal__body city-modal__body">
+                    <div class="city-modal__subtitle">Ваш регион</div>
+                    <div class="city-modal__title"><span class="js-city-choosen-city">Московская область</span>?</div>
+                    <div class="city-modal__text">
+                        Цены и наличие в аптеках зависят<br>
+                        от выбранного региона
+                    </div>
+                    <div class="city-modal__buttons">
+                        <button class="button button-primary" data-bs-dismiss="modal"
+                                aria-label="Close" type="button">
+                            Да
+                        </button>
+                        <button class="button button-solid js-change-location" data-bs-dismiss="modal"
+                                aria-label="Close" type="button">
+                            Выбрать другой
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="citySelectedModal" tabindex="-1"
+         aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="align-items: flex-end; margin: 0 16px; height: 100%;">
+            <div class="city-modal modal-content">
+                <button type="button" class="city-modal__close" data-bs-dismiss="modal"
+                        aria-label="Close">
+                    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 20 20"
+                         fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC"
+                              stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <path d="M4.66797 4.66663L15.3346 15.3333" stroke="#ABB6CC"
+                              stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="modal__body city-modal__body">
+                    <div class="city-modal__subtitle">Регион изменён</div>
+                    <div class="city-modal__title js-city-choosen-city">Московская область</div>
+                    <div class="city-modal__text">
+                        Цены и наличие теперь будут отображаться<br>
+                        для выбранного региона
+                    </div>
+                    <div class="city-modal__buttons">
+                        <button class="button button-primary" data-bs-dismiss="modal"
+                                aria-label="Close" type="button">
+                            Понятно
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="improveModal" tabindex="-1"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered improve-modal">
+        <div class="city-change modal-content">
+            <button type="button" class="city-change__close" data-bs-dismiss="modal"
+                    aria-label="Close">
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20"
+                     fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC"
+                          stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    <path d="M4.66797 4.66663L15.3346 15.3333" stroke="#ABB6CC"
+                          stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <div class="modal__header improve-modal__header">
+                <p class="city-change__title">Что улучшить в оформлении заказа?</p>
+            </div>
+            <div class="modal__body city-change__body">
+                <form action="#" class="improve-form">
+                    <div class="enter-modal__group">
+                        <div class="form-floating" style="margin-bottom:20px"><textarea class="form-control modal__textarea" name="reportText" id="reportText" placeholder="Причина жалобы" minlength="10" maxlength="200" required=""></textarea> <label for="reportText">Комментарий</label><div class="invalid-feedback">Введите обращение</div></div>
+            
+                    </div>
+                    <div class="enter-modal__group enter-modal__group--mb-32">
+                      <div class="enter-modal__group-inner">
+                        <input autocomplete="off" type="text" name="mail" placeholder=" " class="enter-modal__input">
+                        <button type="button" class="modal__clear">
+                          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M4.66797 4.66663L15.3346 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+                        </button>
+                        <label class="enter-modal__placeholder">Email</label>
+                      </div>
+                    </div>
+                    <div class="modal__policy policy-modal">
+                        <p class="policy-modal__note">Нажимая кнопку «Отправить», я даю согласие на обработку персональных данных и соглашаюсь с <a href="#">Политикой обработки персональных данных</a> и <a href="#">Пользовательским соглашением</a></p> 
+                    </div>
+                    <div class="improve-form__bottom">
+                        <button type="submit" class="improve-form__send button button-primary">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Header Middle-->
+    <div class="header__middle header__fixed">
+        <div class="container" style="position: relative">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="header__search search">
+                    <form class="search__form d-flex align-items-center" action="/" autocomplete="off">
+                        <div class="form-group w-100">
+                            <input class="search__input big__input js-searchInput" type="text" name="q"
+                                   placeholder="Поиск лучших цен..">
+                            <svg class="search__icon">
+                                <use xlink:href="images/sprites.svg#loupe"></use>
+                            </svg>
+                            <svg class="search__loading">
+                                <use xlink:href="images/sprites.svg#loading"></use>
+                            </svg>
+                            <button class="search__clear js-qclear" type="button"></button>
+                        </div>
+                    </form>
+                    <div class="search__backdrop"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End-->
+
+    <div class="cart-confmessage">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex flex-column align-items-center column-gap-1">
+                    <div class="cart-confmessage__text">В корзине остались товары, отсутствующие в выбранной аптеке. Вы можете оформить на них отдельный заказ в другую аптеку
+                    </div>
+                    <a href="#" class="button button-secondary cart-confmessage__to-cart w-100">Вернуться в корзину</a>
+
+                    <button type="button" class="cart-confmessage__close align-self-start">
+                        <svg class="icon-message-close">
+                            <use xlink:href="images/sprites.svg#message-close"></use>
+                        </svg>   
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main section-->
+    <main class="main">
+        <!-- Breadcrumbs Start -->
+        <section class="breadcrumbs" style="display: none;">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb scrolling">
+                        <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                        <li class="breadcrumb-item">
+                            <div class="breadcrumb__text">
+                                <a href="#">Каталог</a>
+                                <svg class="js-dropdown-icon js-dropdown" data-id="breadcrumb-1" width="8"
+                                     height="24" viewBox="0 0 8 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1899_12853)">
+                                        <path
+                                                d="M4.76837e-07 10L4 12.8366L8 10L8 11.755L4.30227 15L3.71788 15L4.00125e-07 11.755L4.76837e-07 10Z"
+                                                fill="#444952"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1899_12853">
+                                            <rect width="8" height="24" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <div class="breadcrumb__text">
+                                <a href="#">Лекарственные средства</a>
+                                <svg class="js-dropdown-icon js-dropdown" data-id="breadcrumb-2" width="8"
+                                     height="24" viewBox="0 0 8 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1899_12853)">
+                                        <path
+                                                d="M4.76837e-07 10L4 12.8366L8 10L8 11.755L4.30227 15L3.71788 15L4.00125e-07 11.755L4.76837e-07 10Z"
+                                                fill="#444952"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1899_12853">
+                                            <rect width="8" height="24" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <div class="breadcrumb__text">
+                                <a href="#">Сердечно-сосудистые препараты</a>
+                                <svg class="js-dropdown-icon js-dropdown" data-id="breadcrumb-3" width="8"
+                                     height="24" viewBox="0 0 8 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1899_12853)">
+                                        <path
+                                                d="M4.76837e-07 10L4 12.8366L8 10L8 11.755L4.30227 15L3.71788 15L4.00125e-07 11.755L4.76837e-07 10Z"
+                                                fill="#444952"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1899_12853">
+                                            <rect width="8" height="24" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#">Бисопролол</a>
+                        </li>
+                    </ol>
+                    <div class="breadcrumbs__dropdown js-dropdown-menu" data-id="breadcrumb-1">
+                        <ul>
+                            <li class="js-dropdown-link"><a href="#">1 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">2 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">3 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">4 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">5 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">6 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">7 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">8 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">9 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">10 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">11 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">12 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">13 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">14 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">15 пункт выпадающего списка</a></li>
+                        </ul>
+                    </div>
+                    <div class="breadcrumbs__dropdown js-dropdown-menu" data-id="breadcrumb-2">
+                        <ul>
+                            <li class="js-dropdown-link"><a href="#">1 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">2 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">3 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">4 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">5 пункт выпадающего списка</a></li>
+                        </ul>
+                    </div>
+                    <div class="breadcrumbs__dropdown js-dropdown-menu" data-id="breadcrumb-3">
+                        <ul>
+                            <li class="js-dropdown-link"><a href="#">1 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">2 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">3 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">4 пункт выпадающего списка</a></li>
+                            <li class="js-dropdown-link"><a href="#">5 пункт выпадающего списка</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        <!-- Breadcrumbs end -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="regard">
+                        <div class="regard__top regard__block">
+                            <div class="regard__title">Спасибо за заказ!
+                               <svg class="icon-status" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_457_9344)">
+                                    <path d="M28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14Z" fill="#00C293"/>
+                                    <path d="M20.8368 10.0078L13.7999 18.7386C13.5414 19.0588 13.1074 19.25 12.638 19.25C12.2228 19.25 11.8295 19.1001 11.56 18.8384L7.23173 14.6492C6.88614 14.3146 6.93192 13.823 7.33683 13.5301C7.73013 13.2446 8.39101 13.2391 8.79334 13.5187L12.4711 16.0728L19.0528 9.08472C19.3803 8.73715 20.0592 8.64331 20.5235 8.88363C21.0057 9.13338 21.1437 9.62742 20.8368 10.0078Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_457_9344">
+                                    <rect width="28" height="28" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="regard__text">
+                                <p class="regard__par">Заказ №156354 создан и принят в обработку.<br> Уведомление о готовности заказа вы получите в СМС.</p>
+                            </div>
+
+                            <button class="regard__improve button button-solid w-100" data-bs-toggle="modal" data-bs-target="#improveModal">
+                                <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.164 0.478215L6.5 5.00022V12.0002L7.248 12.2672L6.121 14.5212C5.861 15.0402 5.84 15.6442 6.061 16.1802C6.284 16.7162 6.726 17.1292 7.277 17.3132L11.361 18.6742C11.566 18.7422 11.777 18.7752 11.985 18.7752C12.726 18.7752 13.436 18.3612 13.782 17.6712L15.085 15.0652L19.164 16.5222C19.814 16.7552 20.5 16.2722 20.5 15.5812V1.41922C20.5 0.728216 19.814 0.245215 19.164 0.478215ZM11.993 16.7772L7.91 15.4162L9.145 12.9452L13.187 14.3892L11.993 16.7772ZM2.5 12.0002H4.5V5.00022H2.5C1.397 5.00022 0.5 5.89722 0.5 7.00022V10.0002C0.5 11.1032 1.397 12.0002 2.5 12.0002Z" fill="#ABB6CC"/>
+                                </svg>
+                                Что улучшить в оформлении заказа?
+                            </button>
+                        </div>
+
+                        <div class="regard__block">
+                            <div class="regard__subtitle">Статус заказа</div>
+                            <div class="regard__text">
+                                <p class="regard__par">Следите за статусом и делитесь ссылкой,<br> если заказ должен забрать другой получатель </p>
+                                <p class="regard__par">Посмотреть детали заказа можно в <a href="#">личном кабинете</a></p>
+                            </div>
+                            <div class="regard__buttons">
+                                <a href="#" class="regard__btn button button-solid w-100">
+                                    <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <defs>
+                                            <clipPath id="clip7_1838">
+                                                <rect id="Share_20" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+                                            </clipPath>
+                                        </defs>
+                                        <g clip-path="url(#clip7_1838)">
+                                            <path id="Vector" d="M6.5 14.5C5.11 14.5 4 13.38 4 12C4 10.61 5.11 9.5 6.5 9.5C7.88 9.5 9 10.61 9 12C9 13.38 7.88 14.5 6.5 14.5Z" stroke="#ABB6CC" stroke-opacity="1.000000" stroke-width="2.000000"/>
+                                            <path id="Vector" d="M9 10L14 6.5" stroke="#ABB6CC" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linecap="round"/>
+                                            <path id="Vector" d="M9 14L14 17.5" stroke="#ABB6CC" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linecap="round"/>
+                                            <path id="Vector" d="M16.5 21C15.11 21 14 19.88 14 18.5C14 17.11 15.11 16 16.5 16C17.88 16 19 17.11 19 18.5C19 19.88 17.88 21 16.5 21Z" stroke="#ABB6CC" stroke-opacity="1.000000" stroke-width="2.000000"/>
+                                            <path id="Vector" d="M16.5 8C15.11 8 14 6.88 14 5.5C14 4.11 15.11 3 16.5 3C17.88 3 19 4.11 19 5.5C19 6.88 17.88 8 16.5 8Z" stroke="#ABB6CC" stroke-opacity="1.000000" stroke-width="2.000000"/>
+                                        </g>
+                                    </svg>
+                                    Поделиться статусом
+                                </a>
+
+                                <a href="#" class="regard__btn button button-solid w-100">
+                                    <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <defs/>
+                                        <path id="Vector" d="M13 11L21 3M21 7.75L21 3L16.25 3" stroke="#ABB6CC" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linecap="round"/>
+                                        <path id="Vector" d="M21 12C21 16.24 21 18.36 19.68 19.68C18.36 21 16.24 21 12 21C7.75 21 5.63 21 4.31 19.68C3 18.36 3 16.24 3 12C3 7.75 3 5.63 4.31 4.31C5.63 3 7.75 3 12 3" stroke="#ABB6CC" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linecap="round"/>
+                                    </svg>
+                                    Статус в новом окне
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="regard__details details-regard">
+                            <div class="details-regard__inner">
+                                <div class="regard__block">
+                                    <div class="confirm-header">
+                                        <div class="confirm-header__title">3 товара</div>
+                                    </div>
+
+                                    <div class="confirm-products">
+                                        <div class="confirm-products__row">
+                                            <div class="confirm-product">
+                                                <img src="images/products/product-1@2x.png" alt="alt">
+                                            </div>
+                                            <div class="confirm-product">
+                                                <img src="images/products/product-2@2x.png" alt="alt">
+                                            </div>
+                                            <div class="confirm-product">
+                                                <img src="images/products/product-8.png" alt="alt">
+                                            </div>
+                                        </div>
+
+                                        <div class="confirm-products__expand">
+                                            <div class="confirm-product-expand expand-confirm-product">
+                                                <a href="#" class="expand-confirm-product__img">
+                                                    <img src="images/products/product-1@2x.png" alt="alt">
+                                                </a>
+                                                <div class="expand-confirm-product__name">
+                                                    <a href="#" class="expand-confirm-product__name-text">
+                                                        Супрастин (для инъекций), 20 мг/мл, раствор для внутривенного, (для инъекций), 20 мг/мл, раствор для внутривенного, 10
+                                                    </a>
+                                                    <div class="product-info__bottom">
+                                                        <span class="product__description-icon">
+                                                            <svg viewBox="0 0 24 24">
+                                                                <path d="M3 10C3 6.22876 3 4.34315 4.17157 3.17157C5.34315 2 7.22876 2 11 2H13C16.7712 2 18.6569 2 19.8284 3.17157C21 4.34315 21 6.22876 21 10V14C21 17.7712 21 19.6569 19.8284 20.8284C18.6569 22 16.7712 22 13 22H11C7.22876 22 5.34315 22 4.17157 20.8284C3 19.6569 3 17.7712 3 14V10Z" stroke="#ABB6CC" stroke-width="2"></path>
+                                                                <path d="M12 8L12 10M12 10L12 12M12 10H9.99998M12 10L14 10" stroke="#EB135B" stroke-width="2" stroke-linecap="round"></path>
+                                                                <path d="M8 18L16 18" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round"></path>
+                                                            </svg>
+                                                            По рецепту
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="expand-confirm-product__info">
+                                                    <div class="expand-confirm-product__price">12 800 ₽</div>
+                                                    <div class="expand-confirm-product__count">× 3 шт.</div>
+                                                </div>
+                                            </div><!-- expand-confirm-product -->
+
+                                            <div class="confirm-product-expand expand-confirm-product">
+                                                <a href="#" class="expand-confirm-product__img">
+                                                    <img src="images/products/product-2@2x.png" alt="alt">
+                                                </a>
+                                                <a href="#" class="expand-confirm-product__name">Супрастин (для инъекций), 20 мг/мл, раствор для внутривенного.</a>
+
+                                                <div class="expand-confirm-product__info">
+                                                    <div class="expand-confirm-product__price">12 800 ₽</div>
+                                                    <div class="expand-confirm-product__count">× 3 шт.</div>
+                                                </div>
+                                            </div><!-- expand-confirm-product -->
+
+                                            <div class="confirm-product-expand expand-confirm-product">
+                                                <a href="#" class="expand-confirm-product__img">
+                                                    <img src="images/products/product-8.png" alt="alt">
+                                                </a>
+                                                <a href="#" class="expand-confirm-product__name">Раствор для внутривенного, 10 мг/мл, капли для приема внутрь, 20 мл, 1 шт. капли</a>
+
+                                                <div class="expand-confirm-product__info">
+                                                    <div class="expand-confirm-product__price">12 800 ₽</div>
+                                                    <div class="expand-confirm-product__count">× 3 шт.</div>
+                                                </div>
+                                            </div><!-- expand-confirm-product -->
+
+                                        </div>
+
+                                        <button type="button" class="confirm-products__toggler">
+                                            <span>Подробнее о товарах</span>
+                                        </button>
+                                    </div><!-- confirm-products -->
+
+                                    
+                                </div><!-- confirm-block -->
+
+                                <div class="regard__block">
+                                    <div class="confirm-header">
+                                        <div class="confirm-header__title">Самовывоз из аптеки</div>
+                                    </div>
+                                    <div class="confirm-location">
+                                        <div class="pricelist__company">
+                                            <img class="pricelist__logo" src="images/apteki/magnit_logo.png" alt="">
+                                            <span class="pricelist__name">Магнит аптека
+                                            </span>
+                                        </div>
+                                        <div class="confirm-location__info">
+                                            <div class="pricelist__address">Серпуховский Вал ул, 21 к 4</div>
+                                            <div class="pricelist__subway">Красные ворота</div>
+                                            <div class="pricelist__schedule">08:00-22:00 Пн-Пт, 09:00-21:00 Сб-Вс</div>
+                                        </div>
+
+                                        <div class="confirm-payment">
+                                            <div class="confirm-payment__item">
+                                                <span class="confirm-payment__icon">
+                                                    <svg class="icon-pay-clock">
+                                                        <use xlink:href="images/sprites.svg#pay-clock"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="confirm-payment__val">8 минут</span>
+                                                <span class="confirm-payment__key">Среднее время сбора</span>
+                                            </div><!-- confirm-payment__item -->
+
+                                            <div class="confirm-payment__item">
+                                                <span class="confirm-payment__icon">
+                                                    <svg class="icon-product-card">
+                                                        <use xlink:href="images/sprites.svg#credit-card"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="confirm-payment__val">Только карта</span>
+                                                <span class="confirm-payment__key">Способ оплаты</span>
+                                            </div><!-- confirm-payment__item -->
+
+                                            <div class="confirm-payment__item">
+                                                <span class="confirm-payment__icon">
+                                                    <svg class="icon-sms">
+                                                        <use xlink:href="images/sprites.svg#sms"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="confirm-payment__val">Отправим СМС</span>
+                                                <span class="confirm-payment__key">Когда заказ будет готов</span>
+                                            </div><!-- confirm-payment__item -->
+
+                                        </div>
+                                    </div>
+                                </div><!-- confirm-block -->
+
+                                <div class="regard__block" data-tooltip-supplier-info>
+                                    <div class="confirm-header">
+                                        <div class="confirm-header__title">Самовывоз из аптеки</div>
+                                        <a href="#" class="confirm-header__link">Изменить аптеку</a>
+                                    </div>
+                                    <div class="confirm-location">
+                                        <div class="pricelist__company">
+                                            <img class="pricelist__logo" src="images/apteki/magnit_logo.png" alt="">
+                                            <span class="pricelist__name">Магнит аптека
+                                            </span>
+                                        </div>
+
+                                        <div class="confirm-location__info confirm-location__info--supplier">
+                                            <div class="pricelist__address">Серпуховский Вал ул, 21 к 4</div>
+                                            <div class="pricelist__subway">Красные ворота</div>
+                                            <div class="pricelist__schedule">08:00-22:00 Пн-Пт, 09:00-21:00 Сб-Вс</div>
+                                        </div>
+
+                                        <div class="confirm-supplier" data-tooltip-supplier-info>
+                                            <div class="confirm-supplier__body">
+                                                <svg class="confirm-supplier__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" data-bs-toggle="tooltip" data-bs-container="[data-tooltip-supplier-info]" data-bs-trigger="hover" data-bs-placement="top" data-bs-fallbackplacements="['top']" data-bs-custom-class="confirm-supplier-tooltip" data-bs-title="Товар поступит в аптеку 23 октября от поставщика Polza.ru. Забрать заказ вы сможете после получения СМС о готовности заказа" data-bs-html="true" title="" data-bs-original-title="">
+                                                    <g clip-path="url(#clip0_465_4033)">
+                                                    <path d="M20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z" fill="#F2F2F5"></path>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 15C9.44772 15 9 14.5523 9 14L9 10C9 9.44772 9.44772 9 10 9C10.5523 9 11 9.44772 11 10L11 14C11 14.5523 10.5523 15 10 15Z" fill="#ABB6CC"></path>
+                                                    <path d="M11.25 6.25C11.25 5.55964 10.6904 5 10 5C9.30964 5 8.75 5.55964 8.75 6.25C8.75 6.94036 9.30964 7.5 10 7.5C10.6904 7.5 11.25 6.94036 11.25 6.25Z" fill="#ABB6CC"></path>
+                                                    </g>
+                                                    <defs>
+                                                    <clipPath id="clip0_465_4033">
+                                                    <rect width="20" height="20" fill="white"></rect>
+                                                    </clipPath>
+                                                    </defs>
+                                                </svg>
+
+                                                <div class="confirm-payment__item">
+                                                    <span class="confirm-payment__icon">
+                                                        <img src="images/brands/Polza_logo.svg" alt="alg">
+                                                    </span>
+                                                    <span class="confirm-payment__val">Polza.ru</span>
+                                                    <span class="confirm-payment__key">Поставщик в аптеку</span>
+                                                </div><!-- confirm-payment__item -->
+
+                                                <div class="confirm-payment__item">
+                                                    <span class="confirm-payment__icon">
+                                                        <svg class="icon-pay-clock">
+                                                            <use xlink:href="images/sprites.svg#pay-clock"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="confirm-payment__val">Завтра, 23 октября</span>
+                                                    <span class="confirm-payment__key">Доставит в аптеку</span>
+                                                </div><!-- confirm-payment__item -->
+                                            </div>
+                                        </div>
+
+                                        <div class="confirm-payment">
+                                            <div class="confirm-payment__item">
+                                                <span class="confirm-payment__icon">
+                                                    <svg class="icon-product-card">
+                                                        <use xlink:href="images/sprites.svg#card-cash"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="confirm-payment__val">Карта, наличные</span>
+                                                <span class="confirm-payment__key">Способ оплаты</span>
+                                            </div><!-- confirm-payment__item -->
+
+                                            <div class="confirm-payment__item">
+                                                <span class="confirm-payment__icon">
+                                                    <svg class="icon-sms">
+                                                        <use xlink:href="images/sprites.svg#sms"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="confirm-payment__val">Отправим СМС</span>
+                                                <span class="confirm-payment__key">Когда заказ будет готов</span>
+                                            </div><!-- confirm-payment__item -->
+
+                                        </div>
+
+                                        <div class="confirm-payment" style="margin-top: 24px;">
+                                            <div class="confirm-payment__item">
+                                                <span class="confirm-payment__icon">
+                                                    <svg class="icon-product-card">
+                                                        <use xlink:href="images/sprites.svg#card-cash"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="confirm-payment__val">Карта, наличные</span>
+                                                <span class="confirm-payment__key">Способ оплаты</span>
+                                            </div><!-- confirm-payment__item -->
+
+                                            <div class="confirm-payment__item">
+                                                <span class="confirm-payment__icon">
+                                                    <svg class="icon-product-card">
+                                                        <use xlink:href="images/sprites.svg#cash"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="confirm-payment__val">Только наличные</span>
+                                                <span class="confirm-payment__key">Способ оплаты</span>
+                                            </div><!-- confirm-payment__item -->
+
+                                            <div class="confirm-payment__item">
+                                                <span class="confirm-payment__icon">
+                                                    <svg class="icon-product-card">
+                                                        <use xlink:href="images/sprites.svg#credit-card"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="confirm-payment__val">Только карта</span>
+                                                <span class="confirm-payment__key">Способ оплаты</span>
+                                            </div><!-- confirm-payment__item -->
+
+                                        </div>
+                                    </div>
+                                </div><!-- confirm-block -->
+
+                                <div class="regard__block">
+                                    <div class="order-overall order-overall--regard">
+                                        <div class="order-overall__top">
+                                            <div class="order-overall__titlle">Детали</div>
+                                            <div class="order-overall__info">
+                                                <div class="order-overall__key">Будет готов</div>
+                                                <div class="order-overall__val">Через 30 мин</div>
+                                                <div class="order-overall__key">Хранение до</div>
+                                                <div class="order-overall__val">20 октября 19:00</div>
+                                                <div class="order-overall__key">Оплата при получении</div>
+                                                <div class="order-overall__val">Только карта</div>
+                                            </div>
+                                            <div class="order-overall__result">
+                                                <div class="order-overall__items">Итого</div>
+                                                <div class="order-overall__price">15 747 ₽</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="details-regard__toggle">Детали заказа</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Удалить эти стили. Они подключены для наглядности. В основных компонентах они есть -->
+    <style>
+        .nav {
+            height: fit-content;
+        }
+
+        .nav__menu {
+            width: 100%;
+        }
+
+        .nav-list__link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <footer class="footer">
+        <div class="container container-fluid">
+            <div class="footer__top">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="d-flex align-items-end justify-content-between">
+                            <div class="d-flex flex-column">
+                                <div class="footer__top-title">Выгода в почте</div>
+                                <div class="footer__top-subtitle">
+                                    Подпишитесь и получайте
+                                    акции, и подборки товаров
+                                </div>
+                            </div>
+                            <img class="footer__top-image" src="images/icons/icon.png"
+                                 srcset="images/icons/icon@2x.png 2x" alt="icon" width="95" height="95">
+
+                        </div>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <form class="d-flex form-group">
+                            <input class="big__input big__input--flat--right big__input--white" type="email"
+                                   name="email" placeholder="E-mail">
+                            <button class="button button-big button-primary button--flat--left" type="submit">
+                                Подписаться
+                            </button>
+                        </form>
+                        <div class="footer__policy">Нажимая «Подписаться» вы соглашаетесь с&nbsp;<a
+                                class="footer__policy-link" href="#" target="_blank"
+                                rel="nofollow">Пользовательским&nbsp;соглашением</a><br>и&nbsp;<a
+                                class="footer__policy-link" href="#" target="_blank"
+                                rel="nofollow">Политикой&nbsp;обработки&nbsp;персональных&nbsp;данных</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__middle">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="js-accardion footer__list">
+                            <div class="footer__title js-accardion-link">Покупателям</div>
+                            <div class="footer__items js-accardion-body"><a class="footer__link"
+                                                                            href="/how-order.html"
+                                                                            title="Как сделать заказ">Как сделать
+                                заказ</a><a class="footer__link" href="/pay.html" title="Оплата">Оплата</a><a
+                                    class="footer__link" href="/deliver.html" title="Доставка">Доставка</a><a
+                                    class="footer__link" href="/faqs.html" title="Вопросы и ответы">Вопросы и
+                                ответы</a><a class="footer__link" href="/catalog.html"
+                                             title="Каталог">Каталог</a><a class="footer__link"
+                                                                           href="/manufacturer.html"
+                                                                           title="Производители">Производители</a><a
+                                    class="footer__link"
+                                    href="/med-cities.html" title="Лекарства в городах">Лекарства в
+                                городах</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="js-accardion footer__list">
+                            <div class="footer__title js-accardion-link">Компания</div>
+                            <div class="footer__items js-accardion-body"><a class="footer__link" href="/about.html"
+                                                                            title="О нас">О нас</a><a
+                                    class="footer__link" href="/contact.html"
+                                    title="Контакты">Контакты</a><a class="footer__link" href="/pharmacies.html"
+                                                                    title="Аптеки">Аптеки</a><a class="footer__link"
+                                                                                                href="/regions.html"
+                                                                                                title="Регионы">Регионы</a><a
+                                    class="footer__link" href="/partners.html"
+                                    title="Наши партнеры">Наши партнеры</a><a class="footer__link"
+                                                                              href="/callback.html"
+                                                                              title="Обратная связь">Обратная
+                                связь</a><a
+                                    class="footer__link" href="/conect-pharm.html"
+                                    title="Подключение аптек">Подключение
+                                аптек</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 ">
+                        <div class="js-accardion footer__list">
+                            <div class="footer__title js-accardion-link">Правовая информация</div>
+                            <div class="footer__items js-accardion-body"><a class="footer__link"
+                                                                            href="/term-use.html"
+                                                                            title="Пользовательское соглашение">Пользовательское
+                                соглашение</a><a class="footer__link" href="/policy.html"
+                                                 title="Политика обработки персональных данных">Политика обработки
+                                персональных данных</a><a class="footer__link" href="/policy-callback.html"
+                                                          title="Политика обработки отзывов">Политика обработки
+                                отзывов</a><a class="footer__link" href="/sell-remotely.html"
+                                              title="Продажа дистанционным способом">Продажа дистанционным
+                                способом</a><a class="footer__link" href="/licenses.html"
+                                               title="Лицензии и разрешения">Лицензии и
+                                разрешения</a><a class="footer__link" href="/requisites.html"
+                                                 title="Реквизиты">Реквизиты</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 footer__info">
+                        <div class="footer__number">+7 (495) 954-47-32</div>
+                        <div class="socials">
+                            <a class="socials__link" href="#" title="vk">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                    <g clip-path="url(#clip0_1_1133)">
+                                        <rect width="40" height="40" rx="20" fill="#ABB6CC"/>
+                                        <path d="M20.5718 29C12.3719 29 7.69488 23.3694 7.5 14H11.6074C11.7423 20.8769 14.7704 23.7898 17.1689 24.3904V14H21.0366V19.9309C23.4051 19.6757 25.8933 16.973 26.7328 14H30.6004C29.9558 17.6637 27.2575 20.3664 25.3387 21.4775C27.2575 22.3784 30.3307 24.7357 31.5 29H27.2425C26.3281 26.1471 24.0497 23.9399 21.0366 23.6396V29H20.5718Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1133">
+                                            <rect width="40" height="40" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <a class="socials__link socials__link--ok" href="#" title="ok">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                    <g clip-path="url(#clip0_1_1134)">
+                                        <rect width="40" height="40" rx="20" fill="#ABB6CC"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9858 20.4093C16.5601 20.4093 13.7151 17.5943 13.7151 14.2621C13.7151 10.8151 16.5601 8 19.9858 8C23.5275 8 26.2565 10.8151 26.2565 14.2621C26.2565 17.5943 23.5275 20.4093 19.9858 20.4093ZM19.9858 11.6194C18.5343 11.6194 17.4311 12.8258 17.4311 14.2621C17.4311 15.6984 18.5343 16.7899 19.9858 16.7899C21.4954 16.7899 22.5405 15.6984 22.5405 14.2621C22.5405 12.8258 21.4954 11.6194 19.9858 11.6194ZM22.4825 25.5225L26.0242 28.912C26.721 29.6589 26.721 30.7504 26.0242 31.4399C25.2694 32.1867 24.1082 32.1867 23.5275 31.4399L19.9858 27.9928L16.5601 31.4399C16.2118 31.7846 15.7473 31.9569 15.2247 31.9569C14.8183 31.9569 14.3538 31.7846 13.9474 31.4399C13.2506 30.7504 13.2506 29.6589 13.9474 28.912L17.5472 25.5225C16.2118 25.1203 14.9925 24.6032 13.8313 23.9138C12.9603 23.4542 12.7861 22.3052 13.2506 21.4435C13.8313 20.5817 14.8764 20.3519 15.8053 20.9264C18.3601 22.4776 21.6115 22.4776 24.1663 20.9264C25.0952 20.3519 26.1984 20.5817 26.721 21.4435C27.2435 22.3052 27.0112 23.4542 26.1984 23.9138C25.0952 24.6032 23.8179 25.1203 22.4825 25.5225Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1134">
+                                            <rect width="40" height="40" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <a class="socials__link socials__link--tg" href="#" title="tg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                    <g clip-path="url(#clip0_1_1135)">
+                                        <rect width="40" height="40" rx="20" fill="#ABB6CC"/>
+                                        <path d="M8.48236 19.3078C15.2523 16.5433 24.0125 13.1729 25.2221 12.7063C28.394 11.4854 29.3674 11.7192 28.8821 14.4234C28.5335 16.3671 27.5282 22.8014 26.7262 26.8066C26.2507 29.1818 25.1834 29.4632 23.5059 28.4356C22.6992 27.9412 18.6266 25.441 17.7423 24.8539C16.9355 24.319 15.8227 23.6753 17.2183 22.4077C17.7152 21.9564 20.9704 19.0705 23.5069 16.8247C23.8391 16.5299 23.4217 16.0453 23.0381 16.2817C19.6193 18.3863 14.8794 21.3073 14.276 21.6876C13.3646 22.262 12.4891 22.5254 10.9182 22.1065C9.73077 21.79 8.57146 21.4125 8.12013 21.2686C6.38165 20.7148 6.79424 19.9974 8.48236 19.3078Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1135">
+                                            <rect width="40" height="40" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="footer__text">
+                            <p>
+                                ООО «ФАРМСИ», ИНН 6162088627, 344116, Ростовская область, г.
+                                Ростов-на-Дону, ул. Батуринская, дом 15/15, офис 12
+                            </p>
+                            <p>
+                                Информация, размещенная на сайте,
+                                носит ознакомительный характер и не является публичной офертой, определяемой п. 2
+                                ст.
+                                437 ГК
+                                РФ.
+                            </p>
+                            <p>
+                                © 2022 <a href="#" class="font-primary">ФАРМСИ в
+                                Ростове-на-Дону</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <aside class="nav">
+        <nav class="nav__menu">
+            <ul class="nav__list nav-list">
+                <li class="nav-list__item">
+                    <a href="#" class="nav-list__link nav-link nav-link--active">
+                            <span class="nav-link__header">
+                                <svg class="nav-link__icon" width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                            d="M2.5 12.2039C2.5 9.91549 2.5 8.77128 3.0192 7.82274C3.5384 6.87421 4.48695 6.28551 6.38403 5.10813L8.38403 3.86687C10.3894 2.62229 11.3921 2 12.5 2C13.6079 2 14.6106 2.62229 16.616 3.86687L18.616 5.10812C20.5131 6.28551 21.4616 6.87421 21.9808 7.82274C22.5 8.77128 22.5 9.91549 22.5 12.2039V13.725C22.5 17.6258 22.5 19.5763 21.3284 20.7881C20.1569 22 18.2712 22 14.5 22H10.5C6.72876 22 4.84315 22 3.67157 20.7881C2.5 19.5763 2.5 17.6258 2.5 13.725V12.2039Z"
+                                            stroke-width="2"></path>
+                                    <path
+                                            d="M9.5 16C10.3504 16.6303 11.3846 17 12.5 17C13.6154 17 14.6496 16.6303 15.5 16"
+                                            stroke-width="2" stroke-linecap="round"></path>
+                                </svg>
+                            </span>
+                        <span class="nav-link__label">Главная</span>
+                    </a>
+                </li>
+                <li class="nav-list__item">
+                    <a href="#" class="nav-list__link nav-link">
+                            <span class="nav-link__header">
+                                <svg class="nav-link__icon" width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.5 16L23.5 19" stroke-width="2" stroke-linecap="round"></path>
+                                    <circle cx="15" cy="10.5" r="6.5" stroke-width="2"></circle>
+                                    <path d="M1.5 6H5.5" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                    <path d="M1.5 12H4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    </path>
+                                    <path d="M1.5 18H7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    </path>
+                                </svg>
+                            </span>
+                        <span class="nav-link__label">Каталог</span>
+                    </a>
+                </li>
+                <li class="nav-list__item">
+                    <a href="#" class="nav-list__link nav-link">
+                            <span class="nav-link__header">
+                                <svg class="nav-link__icon" width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                            d="M8 18C8.82843 18 9.5 18.6716 9.5 19.5C9.5 20.3284 8.82843 21 8 21C7.17157 21 6.5 20.3284 6.5 19.5C6.5 18.6716 7.17157 18 8 18Z"
+                                            stroke-width="2"></path>
+                                    <path
+                                            d="M17 18.0001C17.8284 18.0001 18.5 18.6716 18.5 19.5001C18.5 20.3285 17.8284 21.0001 17 21.0001C16.1716 21.0001 15.5 20.3285 15.5 19.5001C15.5 18.6716 16.1716 18.0001 17 18.0001Z"
+                                            stroke-width="2"></path>
+                                    <path
+                                            d="M2.76121 3.09184L3.09289 2.14844L3.09289 2.14844L2.76121 3.09184ZM2.83168 2.05661C2.31066 1.87343 1.73979 2.1473 1.55661 2.66832C1.37343 3.18934 1.6473 3.76021 2.16832 3.94339L2.83168 2.05661ZM5.08584 4.32298L5.91148 3.75878L5.91148 3.75878L5.08584 4.32298ZM6.38772 14.5862L5.66203 15.2742L5.66203 15.2742L6.38772 14.5862ZM21.1578 9.88275L22.1372 10.0846L22.1384 10.0785L21.1578 9.88275ZM20.658 12.3075L21.6374 12.5093L21.6374 12.5093L20.658 12.3075ZM21.2345 6.69708L20.4419 7.30682L20.4419 7.30682L21.2345 6.69708ZM19.6336 15.0504L19.0019 14.2752L19.0019 14.2752L19.6336 15.0504ZM6.45808 9.76V7.03836H4.45808V9.76H6.45808ZM3.09289 2.14844L2.83168 2.05661L2.16832 3.94339L2.42953 4.03523L3.09289 2.14844ZM11.4375 16.5H16.7404V14.5H11.4375V16.5ZM6.45808 7.03836C6.45808 6.33667 6.45944 5.73075 6.40574 5.23466C6.34961 4.71611 6.22541 4.21818 5.91148 3.75878L4.2602 4.88718C4.31851 4.97251 4.38043 5.10872 4.41736 5.44989C4.45672 5.81355 4.45808 6.29295 4.45808 7.03836H6.45808ZM2.42953 4.03523C3.10274 4.27192 3.52505 4.42211 3.83153 4.57249C4.11186 4.71004 4.20483 4.80615 4.2602 4.88718L5.91148 3.75878C5.59461 3.29508 5.17606 3.00443 4.71253 2.77699C4.27516 2.56238 3.72127 2.36937 3.09289 2.14844L2.42953 4.03523ZM4.45808 9.76C4.45808 11.2064 4.47098 12.2769 4.61235 13.1023C4.76608 13.9999 5.07812 14.6583 5.66203 15.2742L7.1134 13.8981C6.83092 13.6002 6.67814 13.3164 6.58365 12.7647C6.4768 12.1408 6.45808 11.2551 6.45808 9.76H4.45808ZM11.4375 14.5C10.0133 14.5 9.05111 14.4976 8.33206 14.3957C7.64748 14.2986 7.33239 14.1291 7.1134 13.8981L5.66203 15.2742C6.30944 15.957 7.12478 16.2445 8.05126 16.3759C8.94326 16.5024 10.0728 16.5 11.4375 16.5V14.5ZM5.45808 7.12H17.5888V5.12H5.45808V7.12ZM20.1784 9.68089L19.6786 12.1056L21.6374 12.5093L22.1372 10.0846L20.1784 9.68089ZM17.5888 7.12C18.4498 7.12 19.188 7.12134 19.766 7.18595C20.0525 7.21797 20.2528 7.26114 20.383 7.30691C20.5213 7.35548 20.4962 7.37742 20.4419 7.30682L22.0271 6.08734C21.7508 5.7282 21.3697 5.53373 21.046 5.42C20.7144 5.30347 20.3469 5.23843 19.9881 5.19833C19.2755 5.11866 18.4128 5.12 17.5888 5.12V7.12ZM22.1384 10.0785C22.3062 9.23781 22.4544 8.50663 22.4909 7.91578C22.5287 7.30315 22.4623 6.65301 22.0271 6.08734L20.4419 7.30682C20.4507 7.31823 20.5194 7.3914 20.4947 7.79257C20.4686 8.21552 20.3564 8.78863 20.1771 9.68701L22.1384 10.0785ZM16.7404 16.5C17.4958 16.5 18.153 16.5017 18.687 16.4364C19.2482 16.3677 19.7886 16.2141 20.2653 15.8256L19.0019 14.2752C18.9269 14.3363 18.8012 14.4075 18.444 14.4512C18.0595 14.4983 17.5459 14.5 16.7404 14.5V16.5ZM19.6786 12.1056C19.516 12.8946 19.4106 13.3973 19.2869 13.7643C19.172 14.1053 19.0769 14.2141 19.0019 14.2752L20.2653 15.8256C20.742 15.4371 21.0016 14.9388 21.1822 14.403C21.354 13.8932 21.4849 13.2492 21.6374 12.5093L19.6786 12.1056Z"
+                                            fill="#ABB6CC"></path>
+                                </svg>
+                                <span class="nav-link__counter">99</span>
+                            </span>
+
+                        <span class="nav-link__label">Корзина</span>
+                    </a>
+                </li>
+                <li class="nav-list__item">
+                    <a href="#" class="nav-list__link nav-link">
+                            <span class="nav-link__header">
+                                <svg class="nav-link__icon" width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                            d="M4.24941 19.6449C5.44791 21 7.67852 21 12.1397 21H12.8603C17.3215 21 19.5521 21 20.7506 19.6449M4.24941 19.6449C3.05091 18.2898 3.46198 16.2325 4.28414 12.1178C4.86881 9.19173 5.16115 7.72868 6.271 6.86434M4.24941 19.6449C4.24941 19.6449 4.24941 19.6449 4.24941 19.6449ZM20.7506 19.6449C21.9491 18.2898 21.538 16.2325 20.7159 12.1178C20.1312 9.19173 19.8389 7.72868 18.729 6.86434M20.7506 19.6449C20.7506 19.6449 20.7506 19.6449 20.7506 19.6449ZM18.729 6.86434C17.6191 6 16.0328 6 12.8603 6H12.1397C8.96716 6 7.38086 6 6.271 6.86434M18.729 6.86434C18.729 6.86434 18.729 6.86434 18.729 6.86434ZM6.271 6.86434C6.271 6.86434 6.27101 6.86434 6.271 6.86434Z"
+                                            stroke-width="2"></path>
+                                    <path d="M10.5 13.6999C11.0207 14.1685 11.3126 14.4313 11.8333 14.8999L14.5 11.8999"
+                                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M9.5 6V5C9.5 3.34315 10.8431 2 12.5 2C14.1569 2 15.5 3.34315 15.5 5V6"
+                                          stroke-width="2" stroke-linecap="round"></path>
+                                </svg>
+                            </span>
+                        <span class="nav-link__label">Заказы</span>
+                    </a>
+                </li>
+                <li class="nav-list__item">
+                    <a href="#" class="nav-list__link nav-link">
+                            <span class="nav-link__header">
+                                <svg class="nav-link__icon" width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.5 7L4.5 7" stroke-width="2" stroke-linecap="round"></path>
+                                    <path d="M20.5 12L4.5 12" stroke-width="2" stroke-linecap="round"></path>
+                                    <path d="M20.5 17L4.5 17" stroke-width="2" stroke-linecap="round"></path>
+                                </svg>
+                            </span>
+                        <span class="nav-link__label">Меню</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <div class="scroll-up scroll-up--hidden">
+        <img src="images/icons/arrow-up.svg" alt="" class="scroll-up__icon">
+    </div>
+    <div class="toast">
+        <div class="toast-body">
+            <img class="toast-image" src="images/products/product-1.png" alt="" width="52" height="52">
+            <div class="d-flex align-items-center toast-content">
+                <div class="text-white toast-text">Товар добавлен в корзину</div>
+                <a class="button toast-button" data-bs-dismiss="toast" aria-label="Close">Перейти</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button class="segmented-control js-segmented" style="display: none;">
+    <input type="radio" name="segmented-control" value="photos" id="tab-1">
+    <label for="tab-1" class="segmented-control__1">
+        <p>Фото</p>
+    </label>
+
+    <input type="radio" name="segmented-control" value="certs" id="tab-2">
+    <label for="tab-2" class="segmented-control__2">
+        <p>Сертификаты</p>
+    </label>
+    <div class="segmented-control__color"></div>
+</button>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script>
+    if (!('IntersectionObserver' in window)) {
+        var script = document.createElement("script");
+        script.src = "https://raw.githubusercontent.com/w3c/IntersectionObserver/master/polyfill/intersection-observer.js";
+        document.getElementsByTagName('head')[0].appendChild(script);
+    }
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+</body>
+
+</html>
