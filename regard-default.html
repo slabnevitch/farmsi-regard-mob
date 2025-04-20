@@ -9,7 +9,7 @@
 
     <meta name="description" content="Описание страницы">
     <meta name="format-detection" content="telephone=no">
-    <title>Продукты</title>
+    <title>Страница благодарности</title>
     <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" sizes="144x144">
     <link rel="icon" href="favicon/favicon-16x16.png" sizes="16x16">
     <link rel="icon" href="favicon/favicon-32x32.png" sizes="32x32">
@@ -23,7 +23,7 @@
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
-<script defer src="main.da414ee54ffcbd72bfab.js"></script></head>
+<script defer src="main.ab4216f25264a70886aa.js"></script></head>
 
 <body>
 <div class="site">
@@ -210,55 +210,60 @@
         </div>
     </div>
 
-    <div class="modal fade" id="improveModal" tabindex="-1"
+    <div class="modal" id="improveModal" tabindex="-1"
      aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered improve-modal">
-        <div class="city-change modal-content">
-            <button type="button" class="city-change__close" data-bs-dismiss="modal"
-                    aria-label="Close">
-                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20"
-                     fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC"
-                          stroke-width="2" stroke-linecap="round"
-                          stroke-linejoin="round"/>
-                    <path d="M4.66797 4.66663L15.3346 15.3333" stroke="#ABB6CC"
-                          stroke-width="2" stroke-linecap="round"
-                          stroke-linejoin="round"/>
-                </svg>
-            </button>
-            <div class="modal__header improve-modal__header">
-                <p class="city-change__title">Что улучшить в оформлении заказа?</p>
-            </div>
-            <div class="modal__body city-change__body">
-                <form action="#" class="improve-form">
-                    <div class="enter-modal__group">
-                        <div class="form-floating" style="margin-bottom:20px"><textarea class="form-control modal__textarea" name="reportText" id="reportText" placeholder="Причина жалобы" minlength="10" maxlength="200" required=""></textarea> <label for="reportText">Комментарий</label><div class="invalid-feedback">Введите обращение</div></div>
-            
-                    </div>
-                    <div class="enter-modal__group enter-modal__group--mb-32">
-                      <div class="enter-modal__group-inner">
-                        <input autocomplete="off" type="text" name="mail" placeholder=" " class="enter-modal__input">
-                        <button type="button" class="modal__clear">
-                          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path d="M4.66797 4.66663L15.3346 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                          </svg>
-                        </button>
-                        <label class="enter-modal__placeholder">Email</label>
-                      </div>
-                    </div>
-                    <div class="modal__policy policy-modal">
-                        <p class="policy-modal__note">Нажимая кнопку «Отправить», я даю согласие на обработку персональных данных и соглашаюсь с <a href="#">Политикой обработки персональных данных</a> и <a href="#">Пользовательским соглашением</a></p> 
-                    </div>
-                    <div class="improve-form__bottom">
-                        <button type="submit" class="improve-form__send button button-primary">Отправить</button>
-                    </div>
-                </form>
+        <div class="modal-dialog modal-dialog-centered improve-modal">
+            <div class="city-change modal-content">
+                <button type="button" class="city-change__close" data-bs-dismiss="modal"
+                        aria-label="Close">
+                    <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20"
+                         fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC"
+                              stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <path d="M4.66797 4.66663L15.3346 15.3333" stroke="#ABB6CC"
+                              stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="modal__header improve-modal__header">
+                    <p class="city-change__title">Что улучшить в оформлении заказа?</p>
+                </div>
+                <div class="modal__body city-change__body">
+                    <form action="#" class="improve-form">
+                        <div class="enter-modal__group">
+                            <div class="enter-modal__group-inner">
+                                <div class="form-floating"><textarea class="form-control modal__textarea" name="reportText" id="reportText" placeholder="Причина жалобы" minlength="10" maxlength="200"></textarea> <label for="reportText">Комментарий</label><div class="invalid-feedback">Введите обращение</div></div>
+                            </div>
+                            <div class="modal__error">Введите текст</div>
+                
+                        </div>
+                        <div class="enter-modal__group enter-modal__group--mb-32">
+                          <div class="enter-modal__group-inner">
+                            <input autocomplete="off" type="text" name="mail" placeholder=" " class="enter-modal__input">
+                            <button type="button" class="modal__clear">
+                              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M4.66797 4.66663L15.3346 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg>
+                            </button>
+                            <label class="enter-modal__placeholder">Email</label>
+                          </div>
+                          <div class="modal__error">Заполните почту</div>
+                        </div>
+                        <div class="modal__policy policy-modal">
+                            <p class="policy-modal__note">Нажимая кнопку «Отправить», я даю согласие на обработку персональных данных и соглашаюсь с <a href="#">Политикой обработки персональных данных</a> и <a href="#">Пользовательским соглашением</a></p> 
+                        </div>
+                        <div class="improve-form__bottom">
+                            <button id="improve-form-submit" type="submit" class="improve-form__send button button-primary">Отправить</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
     <!-- Header Middle-->
+
     <div class="header__middle header__fixed">
         <div class="container" style="position: relative">
             <div class="d-flex align-items-center justify-content-between">
@@ -283,7 +288,7 @@
     </div>
     <!-- Header End-->
 
-    <div class="cart-confmessage">
+    <div class="cart-confmessage cart-confmessage--regard">
         <div class="container">
             <div class="row">
                 <div class="col-12 d-flex flex-column align-items-center column-gap-1">
@@ -428,7 +433,8 @@
                                 </svg>
                             </div>
                             <div class="regard__text">
-                                <p class="regard__par">Заказ №156354 создан и принят в обработку.<br> Уведомление о готовности заказа вы получите в СМС.</p>
+                                <p class="regard__par">Заказ №156354 создан и принят в обработку. </p>
+                                <p class="regard__par">Уведомление о готовности заказа вы получите в СМС.</p>
                             </div>
 
                             <button class="regard__improve button button-solid w-100" data-bs-toggle="modal" data-bs-target="#improveModal">
@@ -439,14 +445,14 @@
                             </button>
                         </div>
 
-                        <div class="regard__block">
+                        <div class="regard__block products">
                             <div class="regard__subtitle">Статус заказа</div>
                             <div class="regard__text">
                                 <p class="regard__par">Следите за статусом и делитесь ссылкой,<br> если заказ должен забрать другой получатель </p>
                                 <p class="regard__par">Посмотреть детали заказа можно в <a href="#">личном кабинете</a></p>
                             </div>
                             <div class="regard__buttons">
-                                <a href="#" class="regard__btn button button-solid w-100">
+                                <a href="#" class="regard__btn button button-solid w-100" data-bs-toggle="modal" data-bs-target="#shareModal">
                                     <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                         <defs>
                                             <clipPath id="clip7_1838">
@@ -473,6 +479,47 @@
                                     Статус в новом окне
                                 </a>
                             </div>
+
+                            <div class="modal" id="shareModal" aria-labelledby="exampleModalLabel" aria-modal="true" role="dialog">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content modal-wrapper">
+                                        <p class="modal__title">Поделиться</p>
+                                        <button type="button" class="modal__close" data-bs-dismiss="modal" aria-label="Close">
+                                            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15.332 4.66663L4.66536 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M4.66797 4.66663L15.3346 15.3333" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </button>
+                                        <div class="modal__variant modal__variant--socials">
+                                            <p class="modal__text">Через соц.сети</p>
+                                            <div class="modal__socials">
+                                                <a class="modal__social modal__social--vk" href="#">
+                                                    <img src="images/icons/VK.svg" alt="Vkontakte">
+                                                </a>
+                                                <a class="modal__social modal__social--ok" href="#">
+                                                    <img src="images/icons/OK.svg" alt="OK.ru">
+                                                </a>
+                                                <a class="modal__social modal__social--tg" href="#">
+                                                    <img src="images/icons/TG.svg" alt="Telegram">
+                                                </a>
+                                                <a class="modal__social modal__social--wa" href="#">
+                                                    <img src="images/icons/WA.svg" alt="Whatsapp">
+                                                </a>
+                                                <a class="modal__social modal__social--vi" href="#">
+                                                    <img src="images/icons/VB.svg" alt="Viber">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="modal__variant modal__variant--link">
+                                            <p class="modal__text">Прямой ссылкой</p>
+                                            <div class="modal__link">
+                                                <img class="modal__link--icon" src="images/icons/copy.svg" alt="Копировать">
+                                                <span class="modal__link--url" data-url="https://farmsi.ru/catalog/bisoprolol/239673">https://farmsi.ru/catalog/bisoprolol/239673</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="regard__details details-regard">
@@ -497,13 +544,13 @@
 
                                         <div class="confirm-products__expand">
                                             <div class="confirm-product-expand expand-confirm-product">
-                                                <a href="#" class="expand-confirm-product__img">
+                                                <div class="expand-confirm-product__img">
                                                     <img src="images/products/product-1@2x.png" alt="alt">
-                                                </a>
+                                                </div>
                                                 <div class="expand-confirm-product__name">
-                                                    <a href="#" class="expand-confirm-product__name-text">
+                                                    <div class="expand-confirm-product__name-text">
                                                         Супрастин (для инъекций), 20 мг/мл, раствор для внутривенного, (для инъекций), 20 мг/мл, раствор для внутривенного, 10
-                                                    </a>
+                                                    </div>
                                                     <div class="product-info__bottom">
                                                         <span class="product__description-icon">
                                                             <svg viewBox="0 0 24 24">
@@ -523,10 +570,10 @@
                                             </div><!-- expand-confirm-product -->
 
                                             <div class="confirm-product-expand expand-confirm-product">
-                                                <a href="#" class="expand-confirm-product__img">
+                                                <div class="expand-confirm-product__img">
                                                     <img src="images/products/product-2@2x.png" alt="alt">
-                                                </a>
-                                                <a href="#" class="expand-confirm-product__name">Супрастин (для инъекций), 20 мг/мл, раствор для внутривенного.</a>
+                                                </div>
+                                                <div class="expand-confirm-product__name">Супрастин (для инъекций), 20 мг/мл, раствор для внутривенного.</div>
 
                                                 <div class="expand-confirm-product__info">
                                                     <div class="expand-confirm-product__price">12 800 ₽</div>
@@ -535,10 +582,10 @@
                                             </div><!-- expand-confirm-product -->
 
                                             <div class="confirm-product-expand expand-confirm-product">
-                                                <a href="#" class="expand-confirm-product__img">
+                                                <div class="expand-confirm-product__img">
                                                     <img src="images/products/product-8.png" alt="alt">
-                                                </a>
-                                                <a href="#" class="expand-confirm-product__name">Раствор для внутривенного, 10 мг/мл, капли для приема внутрь, 20 мл, 1 шт. капли</a>
+                                                </div>
+                                                <div class="expand-confirm-product__name">Раствор для внутривенного, 10 мг/мл, капли для приема внутрь, 20 мл, 1 шт. капли</div>
 
                                                 <div class="expand-confirm-product__info">
                                                     <div class="expand-confirm-product__price">12 800 ₽</div>
@@ -557,7 +604,106 @@
                                 </div><!-- confirm-block -->
 
                                 <div class="regard__block">
-                                    <div class="confirm-header">
+                                    <div class="confirm-header confirm-header--recipient">
+                                        <div class="confirm-header__title">9 товаров</div>
+                                        <a href="#" class="confirm-header__link">Изменить</a>
+                                    </div>
+
+                                    <div class="confirm-products">
+                                        <div class="confirm-products__row">
+                                            <div class="confirm-product">
+                                                <img src="images/products/product-1@2x.png" alt="alt">
+                                            </div>
+                                            <div class="confirm-product">
+                                                <img src="images/products/product-2@2x.png" alt="alt">
+                                            </div>
+                                            <div class="confirm-product">
+                                                <img src="images/products/product-8.png" alt="alt">
+                                            </div>
+                                            <div class="confirm-product">
+                                                <img src="images/products/product-1@2x.png" alt="alt">
+                                                <div class="confirm-product__plug">+6</div>
+                                            </div>
+                                            <div class="confirm-product">
+                                                <img src="images/products/product-2@2x.png" alt="alt">
+                                            </div>
+                                            <div class="confirm-product">
+                                                <img src="images/products/product-8.png" alt="alt">
+                                            </div>
+                                            <div class="confirm-product">
+                                                <img src="images/products/product-1@2x.png" alt="alt">
+                                            </div>
+                                            <div class="confirm-product">
+                                                <img src="images/products/product-2@2x.png" alt="alt">
+                                            </div>
+                                            <div class="confirm-product">
+                                                <img src="images/products/product-8.png" alt="alt">
+                                            </div>
+                                        </div>
+
+                                        <div class="confirm-products__expand">
+                                            <div class="confirm-product-expand expand-confirm-product">
+                                                <div class="expand-confirm-product__img">
+                                                    <img src="images/products/product-1@2x.png" alt="alt">
+                                                </div>
+                                                <div class="expand-confirm-product__name">
+                                                    <div class="expand-confirm-product__name-text">
+                                                        Супрастин (для инъекций), 20 мг/мл, раствор для внутривенного, (для инъекций), 20 мг/мл, раствор для внутривенного, 10
+                                                    </div>
+                                                    <div class="product-info__bottom">
+                                                        <span class="product__description-icon">
+                                                            <svg viewBox="0 0 24 24">
+                                                                <path d="M3 10C3 6.22876 3 4.34315 4.17157 3.17157C5.34315 2 7.22876 2 11 2H13C16.7712 2 18.6569 2 19.8284 3.17157C21 4.34315 21 6.22876 21 10V14C21 17.7712 21 19.6569 19.8284 20.8284C18.6569 22 16.7712 22 13 22H11C7.22876 22 5.34315 22 4.17157 20.8284C3 19.6569 3 17.7712 3 14V10Z" stroke="#ABB6CC" stroke-width="2"></path>
+                                                                <path d="M12 8L12 10M12 10L12 12M12 10H9.99998M12 10L14 10" stroke="#EB135B" stroke-width="2" stroke-linecap="round"></path>
+                                                                <path d="M8 18L16 18" stroke="#ABB6CC" stroke-width="2" stroke-linecap="round"></path>
+                                                            </svg>
+                                                            По рецепту
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="expand-confirm-product__info">
+                                                    <div class="expand-confirm-product__price">12 800 ₽</div>
+                                                    <div class="expand-confirm-product__count">× 3 шт.</div>
+                                                </div>
+                                            </div><!-- expand-confirm-product -->
+
+                                            <div class="confirm-product-expand expand-confirm-product">
+                                                <div class="expand-confirm-product__img">
+                                                    <img src="images/products/product-2@2x.png" alt="alt">
+                                                </div>
+                                                <div class="expand-confirm-product__name">Супрастин (для инъекций), 20 мг/мл, раствор для внутривенного.</div>
+
+                                                <div class="expand-confirm-product__info">
+                                                    <div class="expand-confirm-product__price">12 800 ₽</div>
+                                                    <div class="expand-confirm-product__count">× 3 шт.</div>
+                                                </div>
+                                            </div><!-- expand-confirm-product -->
+
+                                            <div class="confirm-product-expand expand-confirm-product">
+                                                <div class="expand-confirm-product__img">
+                                                    <img src="images/products/product-8.png" alt="alt">
+                                                </div>
+                                                <div class="expand-confirm-product__name">Раствор для внутривенного, 10 мг/мл, капли для приема внутрь, 20 мл, 1 шт. капли</div>
+
+                                                <div class="expand-confirm-product__info">
+                                                    <div class="expand-confirm-product__price">12 800 ₽</div>
+                                                    <div class="expand-confirm-product__count">× 3 шт.</div>
+                                                </div>
+                                            </div><!-- expand-confirm-product -->
+
+                                        </div>
+
+                                        <button type="button" class="confirm-products__toggler">
+                                            <span>Подробнее о товарах</span>
+                                        </button>
+                                    </div><!-- confirm-products -->
+
+
+                                </div>
+
+                                <div class="regard__block">
+                                    <div class="confirm-header confirm-header--recipient">
                                         <div class="confirm-header__title">Самовывоз из аптеки</div>
                                     </div>
                                     <div class="confirm-location">
@@ -608,9 +754,8 @@
                                 </div><!-- confirm-block -->
 
                                 <div class="regard__block" data-tooltip-supplier-info>
-                                    <div class="confirm-header">
+                                    <div class="confirm-header confirm-header--recipient">
                                         <div class="confirm-header__title">Самовывоз из аптеки</div>
-                                        <a href="#" class="confirm-header__link">Изменить аптеку</a>
                                     </div>
                                     <div class="confirm-location">
                                         <div class="pricelist__company">
@@ -627,16 +772,16 @@
 
                                         <div class="confirm-supplier" data-tooltip-supplier-info>
                                             <div class="confirm-supplier__body">
-                                                <svg class="confirm-supplier__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" data-bs-toggle="tooltip" data-bs-container="[data-tooltip-supplier-info]" data-bs-trigger="hover" data-bs-placement="top" data-bs-fallbackplacements="['top']" data-bs-custom-class="confirm-supplier-tooltip" data-bs-title="Товар поступит в аптеку 23 октября от поставщика Polza.ru. Забрать заказ вы сможете после получения СМС о готовности заказа" data-bs-html="true" title="" data-bs-original-title="">
+                                                <svg class="confirm-supplier__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" data-bs-toggle="tooltip" data-bs-container="[data-tooltip-supplier-info]" data-bs-trigger="focus" data-bs-placement="top" data-bs-fallbackplacements="['top']" data-bs-custom-class="confirm-supplier-tooltip" data-bs-title="Товар поступит в аптеку 23 октября от поставщика Polza.ru. Забрать заказ вы сможете после получения СМС о готовности заказа" data-bs-html="true" title="" data-bs-original-title="">
                                                     <g clip-path="url(#clip0_465_4033)">
-                                                    <path d="M20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z" fill="#F2F2F5"></path>
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 15C9.44772 15 9 14.5523 9 14L9 10C9 9.44772 9.44772 9 10 9C10.5523 9 11 9.44772 11 10L11 14C11 14.5523 10.5523 15 10 15Z" fill="#ABB6CC"></path>
-                                                    <path d="M11.25 6.25C11.25 5.55964 10.6904 5 10 5C9.30964 5 8.75 5.55964 8.75 6.25C8.75 6.94036 9.30964 7.5 10 7.5C10.6904 7.5 11.25 6.94036 11.25 6.25Z" fill="#ABB6CC"></path>
+                                                        <path d="M20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z" fill="#EAEAF0"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 15C9.44772 15 9 14.5523 9 14L9 10C9 9.44772 9.44772 9 10 9C10.5523 9 11 9.44772 11 10L11 14C11 14.5523 10.5523 15 10 15Z" fill="#A6B0C8"></path>
+                                                        <path d="M11.25 6.25C11.25 5.55964 10.6904 5 10 5C9.30964 5 8.75 5.55964 8.75 6.25C8.75 6.94036 9.30964 7.5 10 7.5C10.6904 7.5 11.25 6.94036 11.25 6.25Z" fill="#A6B0C8"></path>
                                                     </g>
                                                     <defs>
-                                                    <clipPath id="clip0_465_4033">
-                                                    <rect width="20" height="20" fill="white"></rect>
-                                                    </clipPath>
+                                                        <clipPath id="clip0_465_4033">
+                                                            <rect width="20" height="20" fill="white"></rect>
+                                                        </clipPath>
                                                     </defs>
                                                 </svg>
 
